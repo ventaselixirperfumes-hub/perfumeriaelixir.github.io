@@ -1,0 +1,51 @@
+name: Jekyll site CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build the site in the jekyll/builder container
+      run: |
+        docker run \
+        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+            - nombre: Configurar el entorno Node.js
+  usos: acciones/setup-node@v5.0.0
+  con:
+    # Establezca always-auth en npmrc.
+    always-auth: # opcional, el valor predeterminado es falso
+    Especificación de la versión a utilizar. Ejemplos: 12.x, 10.15.1, >=10.15.0.
+    node-version: # opcional
+    Archivo que contiene la especificación de la versión a utilizar. Ejemplos: package.json, .nvmrc, .node-version, .tool-versions.
+    archivo-versión-nodo: # opcional
+    # Arquitectura de destino que usará Node. Ejemplos: x86, x64. Se usará la arquitectura del sistema por defecto.
+    arquitectura: # opcional
+    # Configure esta opción si desea que la acción busque la última versión disponible que satisfaga la especificación de la versión.
+    check-latest: # opcional
+    Registro opcional para la autenticación. Se establecerá el registro en archivos .npmrc y .yarnrc a nivel de proyecto y se configurará la autenticación para leer desde env.NODE_AUTH_TOKEN.
+    URL del registro: # opcional
+    # Ámbito opcional para la autenticación en registros con ámbito. Se recurrirá al propietario del repositorio al usar el registro de paquetes de GitHub (https://npm.pkg.github.com/).
+    alcance: # opcional
+    # Se usa para extraer distribuciones de nodos de node-versions. Dado que hay un valor predeterminado, normalmente no lo proporciona el usuario. Al ejecutar esta acción en github.com, el valor predeterminado es suficiente. Al ejecutar en GHES, puede pasar un token de acceso personal a github.com si experimenta limitaciones de velocidad.
+    token: # opcional, el valor predeterminado es ${{ github.server_url == 'https://github.com' && github.token || '' }}
+    # Se utiliza para especificar un gestor de paquetes para el almacenamiento en caché en el directorio predeterminado. Valores admitidos: npm, yarn, pnpm.
+    caché: # opcional
+    # Establézcalo en falso para deshabilitar el almacenamiento en caché automático según el campo del administrador de paquetes en package.json. De forma predeterminada, el almacenamiento en caché está habilitado si el campo del administrador de paquetes está presente.
+    package-manager-cache: # opcional, el valor predeterminado es verdadero
+    # Se utiliza para especificar la ruta a un archivo de dependencia: package-lock.json, yarn.lock, etc. Admite caracteres comodín o una lista de nombres de archivos para almacenar en caché múltiples dependencias.
+    ruta de dependencia de caché: # opcional
+    # Se utiliza para especificar un espejo alternativo para descargar binarios de Node.js
+    espejo: # opcional
+    # El token utilizado como encabezado de autorización al obtener desde el espejo
+    token espejo: # opcional
+
+        
