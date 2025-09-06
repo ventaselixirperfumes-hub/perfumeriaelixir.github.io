@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elixir Perfumería</title>
+  <meta name="description" content="Más que perfumes, creamos recuerdos que perduran. Asesoría personalizada, fragancias únicas y autenticidad.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cocoa: "#3a1f14"
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Inter', 'system-ui', 'Avenir', 'Helvetica', 'Arial', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .gold-text { 
+      background: linear-gradient(to bottom, #fde68a, #fcd34d, #f59e0b);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .panel { background: rgba(46, 24, 15, 0.6); backdrop-filter: blur(6px); }
+    .border-gold { border-color: rgba(251, 191, 36, 0.3); }
+  </style>
+  <!-- Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="min-h-screen text-amber-100 bg-[#3a1f14] font-sans">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 border-b border-amber-400/10 bg-[#3a1f14]/80 backdrop-blur">
+    <div class="mx-auto flex max-w-7xl items-center justify-between p-4">
+      <a href="#hero" class="font-serif text-2xl tracking-wide gold-text">Elixir Perfumería</a>
+      <nav class="hidden gap-6 md:flex">
+        <a class="hover:text-amber-300" href="#about">Quiénes somos</a>
+        <a class="hover:text-amber-300" href="#mision">Misión</a>
+        <a class="hover:text-amber-300" href="#vision">Visión</a>
+        <a class="hover:text-amber-300" href="#proposito">Propósito</a>
+        <a class="hover:text-amber-300" href="#productos">Perfumes</a>
+        <a class="hover:text-amber-300" href="#contacto">Contacto</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a aria-label="Instagram" href="https://instagram.com/elixirperfumes.col" target="_blank" class="rounded-full p-2 hover:bg-amber-50/5">
+          <i data-lucide="instagram" class="w-5 h-5"></i>
+        </a>
+        <a aria-label="WhatsApp" href="https://wa.me/573161888572" target="_blank" class="rounded-full p-2 hover:bg-amber-50/5">
+          <i data-lucide="phone-call" class="w-5 h-5"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="relative overflow-hidden">
+    <div class="absolute inset-0 opacity-40" style="background-image:
+      radial-gradient(60% 40% at 50% 0%, rgba(240,200,120,.18) 0%, rgba(0,0,0,0) 70%),
+      radial-gradient(30% 30% at 85% 30%, rgba(240,200,120,.14) 0%, rgba(0,0,0,0) 70%);"></div>
+    <div class="relative mx-auto flex max-w-7xl flex-col items-center gap-8 px-6 py-24 text-center md:py-32">
+      <h1 class="font-serif text-4xl leading-tight md:text-6xl">
+        <span class="gold-text">Más que perfumes,</span><br>
+        <span class="gold-text">creamos recuerdos que perduran</span>
+      </h1>
+      <p class="max-w-2xl text-lg text-amber-100/80">
+        Un sueño convertido en fragancia. Vive una experiencia hecha a tu medida, con asesoría cercana y auténtica.
+      </p>
+      <div class="flex flex-col items-center gap-3 sm:flex-row">
+        <a href="#productos" class="group inline-flex items-center justify-center rounded-xl border border-amber-400/30 bg-amber-500/10 px-6 py-2 text-amber-100 hover:bg-amber-500/20">
+          Explorar fragancias
+          <i data-lucide="arrow-right" class="ml-2 h-4 w-4 transition-transform group-hover:translate-x-0.5"></i>
+        </a>
+        <a href="https://wa.me/573161888572" target="_blank" class="inline-flex items-center justify-center rounded-xl bg-amber-100 text-[#3a1f14] px-6 py-2 font-medium hover:bg-amber-200">
+          Asesoría personalizada
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="mx-auto max-w-7xl px-6 py-16">
+    <div class="grid gap-6 md:grid-cols-3">
+      <div class="panel border border-gold rounded-2xl">
+        <div class="p-6">
+          <div class="flex items-center gap-3 font-serif text-xl">
+            <i data-lucide="leaf" class="h-6 w-6"></i>
+            <span>Fragancias únicas</span>
+          </div>
+          <p class="mt-3 text-amber-100/80">Aromas curados que reflejan tu estilo y personalidad.</p>
+        </div>
+      </div>
+      <div class="panel border border-gold rounded-2xl">
+        <div class="p-6">
+          <div class="flex items-center gap-3 font-serif text-xl">
+            <i data-lucide="shield-check" class="h-6 w-6"></i>
+            <span>Calidad y autenticidad</span>
+          </div>
+          <p class="mt-3 text-amber-100/80">Garantía en cada esencia y en cada detalle.</p>
+        </div>
+      </div>
+      <div class="panel border border-gold rounded-2xl">
+        <div class="p-6">
+          <div class="flex items-center gap-3 font-serif text-xl">
+            <i data-lucide="handshake" class="h-6 w-6"></i>
+            <span>Asesoría personalizada</span>
+          </div>
+          <p class="mt-3 text-amber-100/80">Acompañamiento experto para elegir tu perfume ideal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="border-y border-amber-400/10">
+    <div class="mx-auto grid max-w-7xl items-center gap-10 px-6 py-16 md:grid-cols-2">
+      <div>
+        <h2 class="font-serif text-3xl md:text-4xl gold-text">Quiénes somos</h2>
+        <p class="mt-4 text-amber-100/80">
+          Nacemos del sueño de un joven emprendedor. Creemos que cada fragancia es única y queremos brindar cercanía, confianza y una asesoría auténtica para cada persona.
+        </p>
+      </div>
+      <div class="rounded-2xl border border-amber-400/20 bg-cover bg-center p-24 shadow-2xl" aria-hidden
+           style="background-image:url('https://images.unsplash.com/photo-1594035910387-fea47794261c?q=80&w=1200&auto=format&fit=crop');"></div>
+    </div>
+  </section>
+
+  <!-- Misión / Visión / Propósito -->
+  <section id="mision" class="mx-auto max-w-7xl px-6 py-16">
+    <div class="grid gap-6 md:grid-cols-3">
+      <div class="panel border border-gold rounded-2xl">
+        <div class="p-6">
+          <h3 class="font-serif text-2xl gold-text">Misión</h3>
+          <div class="mt-3 space-y-2 text-amber-100/80">
+            <p>Ofrecer perfumes y asesoría personalizada.</p>
+            <ul class="list-disc space-y-1 pl-5">
+              <li>Fragancias que reflejen estilo y personalidad</li>
+              <li>Garantía de calidad y autenticidad</li>
+              <li>Experiencia única para cada cliente</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="vision" class="panel border border-gold rounded-2xl">
+        <div class="p-6">
+          <h3 class="font-serif text-2xl gold-text">Visión</h3>
+          <div class="mt-3 space-y-2 text-amber-100/80">
+            <p>Ser reconocidos como perfumería innovadora y cercana.</p>
+            <ul class="list-disc space-y-1 pl-5">
+              <li>Referente en asesoría personalizada</li>
+              <li>Expansión en el mercado nacional e internacional</li>
+              <li>Construir una comunidad que valore la autenticidad</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="proposito" class="panel border border-gold rounded-2xl">
+        <div class="p-6">
+          <h3 class="font-serif text-2xl gold-text">Propósito</h3>
+          <div class="mt-3 space-y-2 text-amber-100/80">
+            <p>Inspirar confianza y autenticidad a través de los aromas.</p>
+            <ul class="list-disc space-y-1 pl-5">
+              <li>El perfume como parte de la identidad</li>
+              <li>Crear vínculos emocionales con cada fragancia</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Productos -->
+  <section id="productos" class="border-y border-amber-400/10">
+    <div class="mx-auto max-w-7xl px-6 py-16">
+      <div class="mb-8 flex items-end justify-between">
+        <h2 class="font-serif text-3xl md:text-4xl gold-text">Nuestras fragancias</h2>
+        <a href="https://wa.me/573161888572" target="_blank" class="hidden text-amber-200/80 hover:text-amber-100 md:inline">¿Buscas una recomendación?</a>
+      </div>
+      <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+        <!-- Producto 1 -->
+        <div class="panel border border-gold rounded-2xl overflow-hidden">
+          <div class="aspect-[4/5] w-full bg-cover bg-center" style="background-image:url('https://aromaauthority.com/wp-content/uploads/2023/12/Lattafa-Khamrah-Review.png');"></div>
+          <div class="p-6">
+            <h3 class="font-serif text-2xl">khamrah 1.1</h3>
+          </div>
+          <div class="px-6 pb-6 flex items-center justify-between text-amber-100/80">
+            <div>
+              <p class="text-sm">caramelo • ron • vainilla</p>
+              <p class="mt-1 font-medium text-amber-200">$120.000</p>
+            </div>
+            <a href="https://wa.me/573161888572" target="_blank" class="rounded-xl border border-amber-400/30 bg-amber-500/10 px-4 py-2 hover:bg-amber-500/20">Comprar</a>
+          </div>
+        </div>
+        <!-- Producto 2 -->
+        <div class="panel border border-gold rounded-2xl overflow-hidden">
+          <div class="aspect-[4/5] w-full bg-cover bg-center" style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6KfaI6_yaqlNRGyz5NeuxRfyG2yo55MCqrw&s');"></div>
+          <div class="p-6">
+            <h3 class="font-serif text-2xl">montale starry nights 1.1</h3>
+          </div>
+          <div class="px-6 pb-6 flex items-center justify-between text-amber-100/80">
+            <div>
+              <p class="text-sm">almizcle • manzana • rosas</p>
+              <p class="mt-1 font-medium text-amber-200">$120.000</p>
+            </div>
+            <a href="https://wa.me/573161888572" target="_blank" class="rounded-xl border border-amber-400/30 bg-amber-500/10 px-4 py-2 hover:bg-amber-500/20">Comprar</a>
+          </div>
+        </div>
+        <!-- Producto 3 -->
+        <div class="panel border border-gold rounded-2xl overflow-hidden">
+          <div class="aspect-[4/5] w-full bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1547887537-6158d64c5b32?q=80&w=1200&auto=format&fit=crop');"></div>
+          <div class="p-6">
+            <h3 class="font-serif text-2xl">212 vip black 1.1</h3>
+          </div>
+          <div class="px-6 pb-6 flex items-center justify-between text-amber-100/80">
+            <div>
+              <p class="text-sm">absenta • lavanda • vainilla negra</p>
+              <p class="mt-1 font-medium text-amber-200">$120.000</p>
+            </div>
+            <a href="https://wa.me/573161888572" target="_blank" class="rounded-xl border border-amber-400/30 bg-amber-500/10 px-4 py-2 hover:bg-amber-500/20">Comprar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA WhatsApp -->
+  <section class="mx-auto max-w-7xl px-6 py-12">
+    <div class="rounded-2xl border border-gold panel p-6 md:p-8">
+      <div class="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
+        <div>
+          <h3 class="font-serif text-2xl gold-text">Asesoría personalizada</h3>
+          <p class="text-amber-100/80">Hablemos por WhatsApp y construyamos juntos tu esencia.</p>
+        </div>
+        <a href="https://wa.me/573161888572" target="_blank" class="rounded-xl border border-amber-400/30 bg-amber-500/10 px-6 py-3 hover:bg-amber-500/20 inline-flex items-center gap-2">
+          <i data-lucide="phone-call" class="w-4 h-4"></i> Escríbenos
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="border-t border-amber-400/10">
+    <div class="mx-auto grid max-w-7xl gap-8 px-6 py-16 md:grid-cols-2">
+      <div>
+        <h2 class="font-serif text-3xl md:text-4xl gold-text">Contáctanos</h2>
+        <p class="mt-4 text-amber-100/80">¿Tienes dudas o quieres una recomendación? Estamos listos para ayudarte.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="https://wa.me/573161888572" target="_blank" class="inline-flex items-center gap-2 rounded-xl border border-amber-400/30 bg-amber-500/10 px-4 py-2 hover:bg-amber-500/20">
+            <i data-lucide="phone-call" class="w-4 h-4"></i> WhatsApp
+          </a>
+          <a href="mailto:ventas1elixirperfumes@gmail.com" class="inline-flex items-center gap-2 rounded-xl bg-amber-100 text-[#3a1f14] px-4 py-2 hover:bg-amber-200">
+            <i data-lucide="mail" class="w-4 h-4"></i> Email
+          </a>
+          <a href="https://instagram.com/elixirperfumes.col" target="_blank" class="inline-flex items-center gap-2 rounded-xl border px-4 py-2 hover:bg-amber-50/5">
+            <i data-lucide="instagram" class="w-4 h-4"></i> Instagram
+          </a>
+        </div>
+      </div>
+
+      <form onsubmit="event.preventDefault();" class="rounded-2xl border border-gold panel p-6">
+        <div class="grid gap-4">
+          <label class="text-sm">Nombre
+            <input required class="mt-1 w-full rounded-xl border border-amber-400/20 bg-[#1d0f0a]/40 p-3 outline-none ring-amber-400/40 focus:ring" placeholder="Tu nombre" />
+          </label>
+          <label class="text-sm">Correo
+            <input type="email" required class="mt-1 w-full rounded-xl border border-amber-400/20 bg-[#1d0f0a]/40 p-3 outline-none ring-amber-400/40 focus:ring" placeholder="tucorreo@mail.com" />
+          </label>
+          <label class="text-sm">Mensaje
+            <textarea rows="4" class="mt-1 w-full rounded-xl border border-amber-400/20 bg-[#1d0f0a]/40 p-3 outline-none ring-amber-400/40 focus:ring" placeholder="¿Qué fragancia te gusta?"></textarea>
+          </label>
+          <button type="submit" class="rounded-xl border border-amber-400/30 bg-amber-500/10 px-4 py-2 hover:bg-amber-500/20">Enviar</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-amber-400/10">
+    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-10 md:flex-row">
+      <p class="text-sm text-amber-100/70">© <span id="year"></span> Elixir Perfumería — Todos los derechos reservados</p>
+      <div class="text-sm text-amber-100/60">Hecho con cariño y autenticidad.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Render icons
+    lucide.createIcons();
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
